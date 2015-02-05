@@ -52,7 +52,7 @@ png(file="plot3.png", width = 480, height = 480)
     
     ##  Using filtered data, plot each submetering column using appropriate colors
     with(dates_for_proj, plot(Date.Time, Sub.metering.1, type="o", pch=NA,
-                              ylab="Energy sub metering"))
+                              xlab="", ylab="Energy sub metering"))
     points(dates_for_proj$Date.Time, dates_for_proj$Sub.metering.2, col = "red", type="o", pch=NA)
     points(dates_for_proj$Date.Time, dates_for_proj$Sub.metering.3, col = "blue", type="o", pch=NA)
     
