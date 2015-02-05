@@ -42,6 +42,9 @@ colnames(dates_for_proj)[10]<-as.vector("Date.Time")
 ##  Substitute "." for "_" in column names (I prefer the way this looks)
 colnames(dates_for_proj)<-gsub("_", ".", colnames(dates_for_proj))
 
+##***************
+##*The plotting *
+##***************
 
 ##  Create PNG file, 480x480 pixels
 png(file="plot4.png", width = 480, height = 480)
