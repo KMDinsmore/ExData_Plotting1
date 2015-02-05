@@ -53,20 +53,23 @@ png(file="plot4.png", width = 480, height = 480)
 par(mfrow=c(2,2))
 
 ##  Plot Date.Time vs. Global active power
-with(dates_for_proj, plot(Date.Time, Global.active.power, xlab = "", type="o", pch=NA))
+with(dates_for_proj, plot(Date.Time, Global.active.power, xlab = "",  
+                          ylab="Global Active Power (kilowatts)", type="o", pch=NA))
 
 ##  Plot Date.Time vs. voltage
 with(dates_for_proj, plot(Date.Time, Voltage, xlab = "datetime", type="o", pch=NA))
 
 ##  Plot Date.Time vs Submetering columns, add legend
-with(dates_for_proj, plot(Date.Time, Sub.metering.1, type="o", pch=NA, xlab = ""))
+with(dates_for_proj, plot(Date.Time, Sub.metering.1, type="o", pch=NA, 
+                          xlab="", ylab="Energy sub metering"))
 points(dates_for_proj$Date.Time, dates_for_proj$Sub.metering.2, col = "red", type="o", pch=NA)
 points(dates_for_proj$Date.Time, dates_for_proj$Sub.metering.3, col = "blue", type="o", pch=NA)
 legend("topright", pch= NA, col = c("black", "blue", "red"), bty = "n",
        legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1)
 
 ##  Plot Date.Time vs. Global reactive power
-with(dates_for_proj, plot(Date.Time, Global.reactive.power, xlab = "datetime", type="o", pch=NA))
+with(dates_for_proj, plot(Date.Time, Global.reactive.power, xlab = "datetime", 
+                          ylab="Global_reactive_power", type="o", pch=NA))
 
 ##  Close graphics device
 dev.off() 

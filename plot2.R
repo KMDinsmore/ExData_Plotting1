@@ -50,7 +50,8 @@ colnames(dates_for_proj)<-gsub("_", ".", colnames(dates_for_proj))
 png(file="plot2.png", width = 480, height = 480)
 
 #plot Date/Time vs. Global active power, label as needed
-with(dates_for_proj, plot(Date.Time, Global.active.power, xlab = "", type="o", pch=NA))
+with(dates_for_proj, plot(Date.Time, Global.active.power, xlab = "",  
+                          ylab="Global Active Power (kilowatts)", type="o", pch=NA))
 
 ## Close graphics device
 dev.off()
